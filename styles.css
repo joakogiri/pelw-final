@@ -1,0 +1,466 @@
+/* Resets, defaults e imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --white: #fff;
+  --black: rgb(40, 40, 40);
+  --red: #ff3b3b;
+  --yellow: #fce38a;
+  --dark-blue: #0e5f76;
+  --light-blue: #009494;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: var(--black);
+}
+
+a,
+a:visited,
+a:link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Estilos */
+
+main {
+  margin: 138px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 83px;
+  background: var(--white);
+  border: 1px solid var(--black);
+  border-bottom: 3px solid var(--black);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 150px;
+
+  font-size: 24px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 45px;
+}
+
+.current-link {
+  font-weight: bold;
+}
+
+#isologo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+section {
+  position: relative;
+  width: 1212px;
+  min-height: 500px;
+  border: 1px solid var(--black);
+}
+
+.hero-section {
+  height: 700px;
+}
+
+.hero-section h1 {
+  font-family: 'Space Grotesk';
+  font-size: 96px;
+  font-weight: bold;
+  line-height: 100px;
+
+  position: absolute;
+  top: 44px;
+  right: 83px;
+  width: 593px;
+}
+
+.hero-section p {
+  position: absolute;
+  width: 534px;
+  right: 140px;
+  bottom: 227px;
+
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0.015em;
+}
+
+.hero-section figure {
+  position: absolute;
+  left: 83px;
+  top: 24px;
+}
+
+.hero-section .red-square {
+  width: 292px;
+  height: 100%;
+}
+
+.hero-section .button-container {
+  width: 448px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 89px;
+  right: 221px;
+}
+
+.drop-section h1 {
+  position: absolute;
+  left: 103px;
+  top: 100px;
+
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 82px;
+}
+
+.drop-section p {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+
+  position: absolute;
+  top: 242px;
+  left: 103px;
+}
+
+.drop-section a {
+  position: absolute;
+  left: 103px;
+  bottom: 84px;
+}
+
+.drop-section figure {
+  position: absolute;
+  right: 72px;
+}
+
+.drop-section figure img {
+  height: 498px;
+}
+
+.launch-section {
+  height: 600px;
+  overflow: hidden;
+}
+
+.launch-section h1 {
+  position: absolute;
+  left: 103px;
+  top: 136px;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.launch-section .text-block {
+  position: absolute;
+  top: 226px;
+  left: 103px;
+}
+
+.launch-section .text-block p {
+  font-size: 32px;
+}
+
+.launch-section .text-block .price {
+  font-family: 'Space Grotesk';
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.launch-section a {
+  position: absolute;
+  left: 103px;
+  bottom: 104px;
+}
+
+.launch-section figure {
+  position: absolute;
+  top: 0;
+  right: 72px;
+}
+
+.launch-section figure img {
+  width: 441px;
+  height: 638px;
+}
+
+.launch-section .banner {
+  position: absolute;
+  width: 386px;
+  height: 83px;
+  left: -71px;
+  top: 0;
+
+  border: 2px solid var(--black);
+  transform: rotate(-30deg);
+}
+
+.launch-section .banner p {
+  font-family: 'Space Grotesk';
+  font-size: 48px;
+}
+
+.mail-suscription {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 0;
+  gap: 45px;
+}
+
+.mail-suscription h1 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 61px;
+  z-index: 10;
+}
+
+.mail-suscription .banner {
+  content: '';
+  position: absolute;
+  width: 1036px;
+  height: 13px;
+  top: 90px;
+  background-color: var(--red);
+  z-index: 1;
+}
+
+.mail-suscription form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  padding: 55px 205px;
+}
+
+.mail-suscription form fieldset {
+  border: none;
+  position: relative;
+}
+
+.mail-suscription form fieldset label {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.mail-suscription form fieldset input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+footer {
+  height: 342px;
+  background-color: var(--black);
+  color: var(--white);
+  border: 4px solid var(--white);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 55px 150px;
+  gap: 247px;
+}
+
+footer div {
+  width: 201px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+footer h1 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 82px;
+}
+
+footer h2 {
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 51px;
+}
+
+footer p {
+  width: 155px;
+
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+
+/* Clases por componente */
+
+.action-button,
+.action-button--xl {
+  color: var(--black);
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  border-color: var(--black);
+  text-align: center;
+
+  transition: all 0.1s;
+}
+
+.action-button:active,
+.action-button--xl:active {
+  transform: translate(2px, 2px);
+  border-color: transparent;
+}
+
+.action-button--xl {
+  border-width: 0 6px 6px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.secondary-button {
+  background-color: var(--black);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  text-align: center;
+}
+
+.form-input {
+  width: 802px;
+  height: 50px;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  background-color: var(--white);
+  padding: 0 22px;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+.form-input::placeholder {
+  font-size: 20px;
+}
+
+.form-input:focus-visible {
+  outline: 1px solid var(--black);
+}
+
+.form-checkbox {
+  margin-right: 30px;
+}
+
+.form-checkbox::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  height: 30px;
+  width: 30px;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  background-color: var(--white);
+  z-index: 10;
+}
+
+.form-checkbox:checked .form-checkbox::before {
+  background-color: var(--black);
+}
+
+/* Clases de utilidad */
+
+.c-white {
+  color: var(--white) !important;
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.c-yellow {
+  color: var(--yellow);
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.c-red {
+  color: var(--red);
+}
+
+.bg-lightblue {
+  background-color: var(--light-blue);
+}
+
+.c-lightblue {
+  color: var(--light-blue);
+}
+
+.bg-blue {
+  background-color: var(--dark-blue);
+}
+
+.c-blue {
+  color: var(--dark-blue);
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-700 {
+  font-weight: 700;
+}
+
+.text-500 {
+  font-weight: 500;
+}
+
+.text-300 {
+  font-weight: 300;
+}
