@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statut - Lentes con Estilo</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>Statut - Lentes con status</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon-250.png" />
   </head>
   <body>
     <!-- Header -->
@@ -17,50 +18,32 @@
         </div>
         <ul class="nav-container">
           <li><a href="index.html" class="current-link">Home</a></li>
-          <li><a href="#">Tienda</a></li>
-          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="shop.html">Tienda</a></li>
+          <li><a href="about.html">Sobre Nosotros</a></li>
         </ul>
         <ul class="nav-container">
-          <li><a href="#">Mi Cuenta</a></li>
-          <li class="action-button bg-yellow"><a href="#">Carrito</a></li>
+          <li><a href="my-account.html">Mi Cuenta</a></li>
+          <li class="action-button bg-yellow"><a href="my-cart.html">Carrito</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- Content -->
     <main>
       <section class="hero-section">
         <h1>Marca estilo con lentes Statut</h1>
         <p>Diseño innovador desde el marco hasta el cristal</p>
 
         <div class="button-container">
-          <a class="action-button--xl bg-red text-upper c-white" href="#"
+          <a class="action-button--xl bg-red text-upper c-black" href="shop.html"
             >Ver productos</a
           >
-          <a href="#" class="secondary-button c-white">Sobre Statut</a>
+          <a href="about.html" class="secondary-button c-white">Sobre Nosotros</a>
         </div>
         <figure>
           <img src="assets/header-image.png" alt="Mujeres con lentes de sol" />
         </figure>
         <div class="red-square bg-red">&nbsp;</div>
-      </section>
-
-      <section class="drop-section">
-        <h1>Dominá tu Estilo</h1>
-
-        <p><b>Nuevo drop</b> 2022 Otoño / Invierno</p>
-
-        <a
-          href="#"
-          class="action-button--xl bg-blue c-white text-700 text-upper"
-          >Ver ahora</a
-        >
-
-        <figure>
-          <img
-            src="assets/girl-with-glasses 1.png"
-            alt="Mujer con lentes de sol"
-          />
-        </figure>
       </section>
 
       <section class="launch-section">
@@ -90,6 +73,26 @@
         </div>
       </section>
 
+      <section class="drop-section">
+        <h1>Hot Incoming</h1>
+
+        <h5><b>Nuevo drop</b> 2022 Otoño / Invierno</h2>
+
+        <p class="drop-countdown bg-black c-white text-700" id="drop-countdown">
+          Cargando...
+        </p>
+
+        <figure>
+          <img
+            src="assets/girl-with-glasses 1.png"
+            alt="Mujer con lentes de sol"
+          />
+        </figure>
+      </section>
+
+      
+
+      <!-- Mail Sub Section -->
       <section class="mail-suscription">
         <h1>No te pierdas ningún lanzamiento</h1>
         <div class="banner">&nbsp;</div>
@@ -101,10 +104,16 @@
               id="name"
               placeholder="Tu nombre"
               class="form-input"
+              name="email-name-input"
             />
             <br />
             <label for="gender">¿Cómo nos referimos a ti? (opcional)</label>
-            <input type="text" placeholder="Tu género" class="form-input" />
+            <input
+              type="text"
+              placeholder="Tu género"
+              class="form-input"
+              name="email-gender-input"
+            />
           </fieldset>
 
           <fieldset>
@@ -114,12 +123,21 @@
               type="email"
               placeholder="tu@correo.com"
               class="form-input"
+              name="email-service-input"
             />
           </fieldset>
 
           <fieldset>
-            <input type="checkbox" class="form-checkbox" id="checkbox" />
-            <label for="checkbox">Acepto que me envíen publicidad</label>
+            <input
+              type="checkbox"
+              class="form-checkbox"
+              id="mail-checkbox"
+              name="email-checkbox-input"
+            />
+            <span class="form-checkmark" id="mail-checkmark"></span>
+            <label for="mail-checkbox" id="mail-checkmark-label"
+              >Acepto que me envíen publicidad</label
+            >
           </fieldset>
 
           <button type="submit" class="action-button--xl bg-red">
@@ -147,8 +165,8 @@
         >
       </div>
       <div>
-        <a href="#" class="c-white">FAQ's</a>
-        <a href="#" class="c-white">Términos de Uso</a>
+        <a href="faq-tos.html" class="c-white">FAQ's</a>
+        <a href="faq-tos.html#Terms" class="c-white">Términos de Uso</a>
       </div>
     </footer>
 
