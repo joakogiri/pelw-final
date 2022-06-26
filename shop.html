@@ -22,48 +22,51 @@
         </ul>
         <ul class="nav-container">
           <li><a href="my-account.html">Mi Cuenta</a></li>
-          <li class="action-button bg-yellow">
-            <a href="my-cart.html">Carrito</a>
-          </li>
+          <button type="button" id="cart-btn" class="action-button bg-yellow">
+            Carrito
+          </button>
+          <div id="cart-list" class="hidden bg-white">
+            <ul></ul>
+            <ul class="cart-payment">
+              <li>
+                <p>Total a pagar</p>
+                <p id="payment-num">0</p>
+              </li>
+            </ul>
+            <div class="cart-button-container">
+              <button
+                type="button"
+                class="action-button bg-yellow"
+                id="purchase-btn"
+              >
+                Comprar!
+              </button>
+              <button
+                type="button"
+                class="secondary-button c-white"
+                id="trash-btn"
+              >
+                Vaciar
+              </button>
+            </div>
+          </div>
         </ul>
       </nav>
     </header>
     <!-- Content -->
 
     <main>
+      <!-- Hero Section -->
       <section class="hero-shop-section">
-        <h1>Tienda Online</h1>
+        <h2>Tienda Online</h2>
         <p>Comprá tu estilo, nosotros nos encargamos del envío.</p>
         <figure>
           <img src="assets/shop-girl.png" alt="Mujer comprando" />
         </figure>
       </section>
 
-      <section class="item-section bg-yellow">
-        <div class="item-buyable bg-white">
-          <figure>
-            <img src="assets/yellowbee.png" alt="yellow glasses" />
-          </figure>
-          <h1 class="text-400">YellowBee</h1>
-          <p class="description">Lentes Yellowbee Antireflex lTd Type</p>
-
-          <p class="price text-400">$11.999</p>
-          <button type="button" class="action-button bg-yellow text-400">
-            Agregar al carrito
-          </button>
-        </div>
-
-        <div class="item-buyable">
-          <h1>Spicy</h1>
-        </div>
-
-        <div class="item-buyable">
-          <h1>Tornado</h1>
-        </div>
-      </section>
-
       <section class="launch-section">
-        <h1>Stronghold SG</h1>
+        <h2>Stronghold SG</h2>
         <div class="text-block">
           <p>Marcos más robustos</p>
           <p>Estilo moderno</p>
@@ -71,11 +74,12 @@
           <p class="price">$15.999</p>
         </div>
 
-        <a
-          href="#"
-          class="action-button--xl text-700 text-upper bg-lightblue c-white"
-          >comprar ahora</a
+        <button
+          type="button"
+          class="action-button--xl text-700 text-upper bg-lightblue c-white add-to-cart"
         >
+          Agregar al carrito
+        </button>
 
         <figure>
           <img
@@ -85,15 +89,126 @@
         </figure>
 
         <div class="banner bg-red">
-          <p class="text-700 c-white">new new new new new</p>
+          <p class="text-700 c-white">new new new</p>
         </div>
+      </section>
+
+      <section class="item-section bg-yellow">
+        <div class="item-buyable bg-white">
+          <figure>
+            <img src="assets/yellowbee.png" alt="Yellowbee Glasses TM" />
+          </figure>
+          <h2 class="text-400">YellowBee</h2>
+          <p class="description">Lentes Yellowbee Antireflex lTd Type</p>
+
+          <p class="price text-400">$11.999</p>
+          <button
+            type="button"
+            class="action-button bg-yellow text-400 add-to-cart"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+
+        <div class="item-buyable bg-white">
+          <figure>
+            <img src="assets/spicy.png" alt="Spicy Glasses TM" />
+          </figure>
+          <h2 class="text-400">Spicy</h2>
+          <p class="description">Lentes Spicy Beachready LC</p>
+
+          <p class="price text-400">$10.499</p>
+          <button
+            type="button"
+            class="action-button bg-yellow text-400 add-to-cart"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+
+        <div class="item-buyable bg-white">
+          <figure>
+            <img src="assets/tornado.png" alt="Tornado Glasses TM" />
+          </figure>
+          <h2 class="text-400">Tornado</h2>
+          <p class="description">Lentes Tornado Sunprotect</p>
+
+          <p class="price text-400">$9.895</p>
+          <button
+            type="button"
+            class="action-button bg-yellow text-400 add-to-cart"
+          >
+            Agregar al carrito
+          </button>
+        </div>
+      </section>
+
+      <!-- Mail Sub Section -->
+      <section class="mail-suscription">
+        <h2>No te pierdas ningún lanzamiento</h2>
+        <div class="banner">&nbsp;</div>
+        <form action="#">
+          <fieldset>
+            <label for="mail-name">¿Cómo quieres que te llamemos?</label>
+            <input
+              type="text"
+              id="mail-name"
+              placeholder="Tu nombre"
+              class="form-input"
+              name="email-name-input"
+              required
+            />
+            <br />
+            <label for="mail-gender"
+              >¿Cómo nos referimos a ti? (opcional)</label
+            >
+            <input
+              type="text"
+              placeholder="Tu género"
+              class="form-input"
+              name="email-gender-input"
+              id="mail-gender"
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="mail-email">¿A dónde te contactamos?</label>
+            <br />
+            <input
+              type="email"
+              placeholder="tu@correo.com"
+              class="form-input"
+              name="email-service-input"
+              id="mail-email"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <input
+              type="checkbox"
+              class="form-checkbox"
+              id="mail-checkbox"
+              name="email-checkbox-input"
+              required
+            />
+            <span class="form-checkmark" id="mail-checkmark"></span>
+            <label for="mail-checkbox" id="mail-checkmark-label"
+              >Acepto que me envíen publicidad</label
+            >
+          </fieldset>
+
+          <button type="submit" class="action-button--xl bg-red">
+            Quiero recibir ofertas!
+          </button>
+        </form>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
       <div>
-        <h1>Statut</h1>
+        <h2>Statut</h2>
         <p>
           Avenida Siempreviva 742,<br />
           único piso,
@@ -102,7 +217,7 @@
         </p>
       </div>
       <div>
-        <h2>Redes</h2>
+        <h3>Redes</h3>
         <a href="#" class="c-white">instagram.com/statutwatches</a>
         <a href="mailto:hola@statutwatches.com" class="c-white"
           >hola@statutwatches.com</a

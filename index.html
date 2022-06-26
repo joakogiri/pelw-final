@@ -23,7 +23,9 @@
         </ul>
         <ul class="nav-container">
           <li><a href="my-account.html">Mi Cuenta</a></li>
-          <li class="action-button bg-yellow"><a href="my-cart.html">Carrito</a></li>
+          <li class="action-button bg-yellow">
+            <a href="my-cart.html">Carrito</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -31,14 +33,18 @@
     <!-- Content -->
     <main>
       <section class="hero-section">
-        <h1>Marca estilo con lentes Statut</h1>
+        <h2>Marca estilo con lentes Statut</h2>
         <p>Diseño innovador desde el marco hasta el cristal</p>
 
         <div class="button-container">
-          <a class="action-button--xl bg-red text-upper c-black" href="shop.html"
+          <a
+            class="action-button--xl bg-red text-upper c-black"
+            href="shop.html"
             >Ver productos</a
           >
-          <a href="about.html" class="secondary-button c-white">Sobre Nosotros</a>
+          <a href="about.html" class="secondary-button c-white"
+            >Sobre Nosotros</a
+          >
         </div>
         <figure>
           <img src="assets/header-image.png" alt="Mujeres con lentes de sol" />
@@ -47,7 +53,7 @@
       </section>
 
       <section class="launch-section">
-        <h1>Stronghold SG</h1>
+        <h2>Stronghold SG</h2>
         <div class="text-block">
           <p>Marcos más robustos</p>
           <p>Estilo moderno</p>
@@ -69,14 +75,14 @@
         </figure>
 
         <div class="banner bg-red">
-          <p class="text-700 c-white">new new new new new</p>
+          <p class="text-700 c-white">new new new</p>
         </div>
       </section>
 
       <section class="drop-section">
-        <h1>Hot Incoming</h1>
+        <h2>Hot Incoming</h2>
 
-        <h5><b>Nuevo drop</b> 2022 Otoño / Invierno</h2>
+        <h5><b>Nuevo drop</b> 2022 Otoño / Invierno</h5>
 
         <p class="drop-countdown bg-black c-white text-700" id="drop-countdown">
           Cargando...
@@ -84,46 +90,50 @@
 
         <figure>
           <img
-            src="assets/girl-with-glasses 1.png"
+            src="assets/girl-with-glasses-1.png"
             alt="Mujer con lentes de sol"
           />
         </figure>
       </section>
 
-      
-
       <!-- Mail Sub Section -->
       <section class="mail-suscription">
-        <h1>No te pierdas ningún lanzamiento</h1>
+        <h2>No te pierdas ningún lanzamiento</h2>
         <div class="banner">&nbsp;</div>
         <form action="#">
           <fieldset>
-            <label for="name">¿Cómo quieres que te llamemos?</label>
+            <label for="mail-name">¿Cómo quieres que te llamemos?</label>
             <input
               type="text"
-              id="name"
+              id="mail-name"
               placeholder="Tu nombre"
               class="form-input"
               name="email-name-input"
+              required
             />
             <br />
-            <label for="gender">¿Cómo nos referimos a ti? (opcional)</label>
+            <label for="mail-gender"
+              >¿Cómo nos referimos a ti? (opcional)</label
+            >
             <input
               type="text"
               placeholder="Tu género"
               class="form-input"
               name="email-gender-input"
+              id="mail-gender"
             />
           </fieldset>
 
           <fieldset>
-            <label for="email">¿A dónde te contactamos?</label>
+            <label for="mail-email">¿A dónde te contactamos?</label>
             <br />
             <input
               type="email"
               placeholder="tu@correo.com"
               class="form-input"
               name="email-service-input"
+              id="mail-email"
+              required
             />
           </fieldset>
 
@@ -133,6 +143,7 @@
               class="form-checkbox"
               id="mail-checkbox"
               name="email-checkbox-input"
+              required
             />
             <span class="form-checkmark" id="mail-checkmark"></span>
             <label for="mail-checkbox" id="mail-checkmark-label"
@@ -149,7 +160,7 @@
 
     <footer>
       <div>
-        <h1>Statut</h1>
+        <h2>Statut</h2>
         <p>
           Avenida Siempreviva 742,<br />
           único piso,
@@ -158,7 +169,7 @@
         </p>
       </div>
       <div>
-        <h2>Redes</h2>
+        <h3>Redes</h3>
         <a href="#" class="c-white">instagram.com/statutwatches</a>
         <a href="mailto:hola@statutwatches.com" class="c-white"
           >hola@statutwatches.com</a
