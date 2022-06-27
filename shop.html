@@ -22,35 +22,29 @@
         </ul>
         <ul class="nav-container">
           <li><a href="my-account.html">Mi Cuenta</a></li>
-          <button type="button" id="cart-btn" class="action-button bg-yellow">
-            Carrito
-          </button>
-          <div id="cart-list" class="hidden bg-white">
-            <ul></ul>
-            <ul class="cart-payment">
-              <li>
-                <p>Total a pagar</p>
-                <p id="payment-num">0</p>
-              </li>
-            </ul>
-            <div class="cart-button-container">
-              <button
-                type="button"
-                class="action-button bg-yellow"
-                id="purchase-btn"
-              >
-                Comprar!
-              </button>
-              <button
-                type="button"
-                class="secondary-button c-white"
-                id="trash-btn"
-              >
-                Vaciar
-              </button>
-            </div>
-          </div>
+          <li id="cart-btn" class="action-button bg-yellow">Carrito</li>
         </ul>
+        <div id="cart-list" class="hidden bg-white">
+          <ul></ul>
+          <ul class="cart-payment">
+            <li>
+              <p>Total a pagar</p>
+              <p id="payment-num">0</p>
+            </li>
+          </ul>
+          <div class="cart-button-container">
+            <a href="shop.html" class="action-button bg-yellow" id="buy-btn">
+              Comprar!
+            </a>
+            <button
+              type="button"
+              class="secondary-button c-white"
+              id="trash-btn"
+            >
+              Vaciar
+            </button>
+          </div>
+        </div>
       </nav>
     </header>
     <!-- Content -->
@@ -65,7 +59,7 @@
         </figure>
       </section>
 
-      <section class="launch-section">
+      <section class="launch-section" id="stronghold">
         <h2>Stronghold SG</h2>
         <div class="text-block">
           <p>Marcos más robustos</p>
@@ -226,6 +220,7 @@
       <div>
         <a href="faq-tos.html" class="c-white">FAQ's</a>
         <a href="faq-tos.html#Terms" class="c-white">Términos de Uso</a>
+        <a href="my-purchases.html" class="c-white">Tracking de Pedidos</a>
       </div>
     </footer>
 

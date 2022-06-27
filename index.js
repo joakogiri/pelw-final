@@ -1,14 +1,34 @@
 'use strict';
 
 // Email Suscription - Custom Checkmark
-const mailCheckmark = document.getElementById('mail-checkmark');
-const mailCheckbox = document.getElementById('mail-checkbox');
 
-mailCheckmark.addEventListener('click', () =>
-  mailCheckbox.toggleAttribute('checked')
-);
+if (document.URL.includes('index.html')) {
+  const mailCheckmark = document.getElementById('mail-checkmark');
+  const mailCheckbox = document.getElementById('mail-checkbox');
 
-// Homepage - Countdown
+  mailCheckmark.addEventListener('click', () =>
+    mailCheckbox.toggleAttribute('checked')
+  );
+}
+
+if (
+  document.URL.includes('login.html') ||
+  document.URL.includes('sign-up.html')
+) {
+  const mailPass = document.getElementById('mail-password');
+  const submitBtn = document.getElementById('submit-btn');
+  const passwordError = document.getElementById('password-error');
+
+  const mes = 'Tu contraseña debe tener al menos ocho (8) caracteres.';
+
+  mailPass.addEventListener('input', () =>
+    mailPass.value.length < 8
+      ? ((passwordError.innerHTML = mes), (submitBtn.type = 'button'))
+      : ((passwordError.innerHTML = ''), (submitBtn.type = 'submit'))
+  );
+}
+
+// Homepage - Countdown 8 de Julio 6pm
 const dropCountdown = document.getElementById('drop-countdown');
 const fechaLimite = new Date('Jul 8, 2022 18:00:00').getTime();
 
@@ -39,10 +59,9 @@ const countdown = setInterval(() => {
   }
 }, 1000);
 
-/****** CART  ******/
-// Elementos
+// Cart
 const cartBtn = document.getElementById('cart-btn');
-const purchaseBtn = document.getElementById('purchase-btn');
+const buyBtn = document.getElementById('buy-btn');
 const trashBtn = document.getElementById('trash-btn');
 const cartList = document.getElementById('cart-list');
 const ulCartList = cartList.firstElementChild;
@@ -71,6 +90,8 @@ const handleEmptyList = () => {
 
     totalPay = 0;
     paymentNum.innerHTML = totalPay;
+
+    buyBtn.href = 'shop.html';
   }
 };
 
@@ -81,10 +102,13 @@ function handleCartList(indexArr) {
   }
 
   const li = document.createElement('li');
+
   itemsAdded.push(itemsList[indexArr]);
 
   const lastItem = itemsAdded.length - 1;
 
+  // recorre el array con la data del item agregado
+  // y lo agrega al html
   itemsAdded[lastItem].forEach((e) => {
     const parraf = document.createElement('p');
     parraf.innerHTML = e;
@@ -93,9 +117,12 @@ function handleCartList(indexArr) {
 
   ulCartList.appendChild(li);
 
+  // agrega la suma total al html
   const add = itemsAdded[lastItem][1];
   totalPay += add;
   paymentNum.innerHTML = totalPay.toFixed(3);
+
+  buyBtn.href = 'my-account.html';
 }
 
 for (let i = 0; i < addToCart.length; i++) {
@@ -107,4 +134,14 @@ trashBtn.addEventListener('click', () => popList());
 function popList() {
   itemsAdded = [];
   handleEmptyList();
+}
+
+if (document.URL.includes('faq-tos.html')) {
+  const accordion = document.querySelectorAll('.faq-accordion');
+
+  for (let i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', () =>
+      accordion[i].lastElementChild.classList.toggle('hidden')
+    );
+  }
 }

@@ -5,6 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Statut - Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon-250.png" />
   </head>
-  <body></body>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="nav-container">
+          <a href="index.html" id="isologo">Statut</a>
+        </div>
+        <ul class="nav-container">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Tienda</a></li>
+          <li><a href="about.html">Sobre Nosotros</a></li>
+        </ul>
+        <ul class="nav-container">
+          <li><a href="my-account.html">Mi Cuenta</a></li>
+          <li id="cart-btn" class="action-button bg-yellow">Carrito</li>
+        </ul>
+        <div id="cart-list" class="hidden bg-white">
+          <ul></ul>
+          <ul class="cart-payment">
+            <li>
+              <p>Total a pagar</p>
+              <p id="payment-num">0</p>
+            </li>
+          </ul>
+          <div class="cart-button-container">
+            <a href="shop.html" class="action-button bg-yellow" id="buy-btn">
+              Comprar!
+            </a>
+            <button
+              type="button"
+              class="secondary-button c-white"
+              id="trash-btn"
+            >
+              Vaciar
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <main>
+      <section class="mail-suscription">
+        <h2>Iniciar Sesión</h2>
+        <form action="#">
+          <fieldset>
+            <label for="mail-email">Ingresa tu correo</label>
+            <br />
+            <input
+              type="email"
+              placeholder="tu@correo.com"
+              class="form-input"
+              name="email-service-input"
+              id="mail-email"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <label for="mail-password">Ingresa tu Contraseña</label>
+            <p id="password-error" class="c-red"></p>
+            <input
+              type="password"
+              id="mail-password"
+              name="mail-password"
+              class="form-input"
+              placeholder="Tu c0ntRas3ña"
+              required
+            />
+          </fieldset>
+
+          <button
+            type="submit"
+            class="action-button--xl bg-red"
+            id="submit-btn"
+          >
+            Iniciar Sesión
+          </button>
+          <a href="sign-up.html">o Registrate Aquí</a>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div>
+        <h2>Statut</h2>
+        <p>
+          Avenida Siempreviva 742,<br />
+          único piso,
+          <br />
+          <b>Springfield</b>
+        </p>
+      </div>
+      <div>
+        <h3>Redes</h3>
+        <a href="#" class="c-white">instagram.com/statutwatches</a>
+        <a href="mailto:hola@statutwatches.com" class="c-white"
+          >hola@statutwatches.com</a
+        >
+      </div>
+      <div>
+        <a href="faq-tos.html" class="c-white">FAQ's</a>
+        <a href="faq-tos.html#Terms" class="c-white">Términos de Uso</a>
+        <a href="my-purchases.html" class="c-white">Tracking de Pedidos</a>
+      </div>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="index.js"></script>
+  </body>
 </html>

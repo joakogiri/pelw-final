@@ -51,6 +51,7 @@ main {
   gap: 55px;
 }
 
+/* Nav Related Section */
 nav {
   position: fixed;
   top: 0;
@@ -157,6 +158,8 @@ section {
   border: 1px solid var(--black);
 }
 
+/* Hero Section */
+
 .hero-section {
   height: 700px;
 }
@@ -247,6 +250,8 @@ section {
   top: -1px;
 }
 
+/* Drop Section */
+
 .drop-section h2 {
   position: absolute;
   left: 103px;
@@ -290,6 +295,8 @@ section {
 .drop-section figure img {
   height: 498px;
 }
+
+/* Launch Section */
 
 .launch-section {
   height: 600px;
@@ -354,16 +361,7 @@ section {
   font-size: 48px;
 }
 
-.mail-suscription {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 55px 0;
-  gap: 45px;
-}
-
+/* Items Section */
 .item-section {
   height: 600px;
   display: flex;
@@ -408,6 +406,71 @@ section {
   font-size: 18px;
 }
 
+/* About Section */
+
+.about-section {
+  height: 941px;
+  overflow: hidden;
+}
+
+.about-section h2 {
+  position: absolute;
+  font-size: 64px;
+  font-family: 'Space Grotesk';
+
+  left: 103px;
+  top: 27px;
+}
+
+.about-section p {
+  position: absolute;
+  font-size: 32px;
+  line-height: 123.4%;
+  letter-spacing: 0.015em;
+  width: 616px;
+  z-index: 50;
+}
+
+.about-section .p-1 {
+  left: 103px;
+  top: 150px;
+}
+
+.about-section .p-2 {
+  left: 103px;
+  top: 542px;
+}
+
+.about-section figure {
+  position: absolute;
+  width: 406px;
+  height: 452px;
+  left: 806px;
+  top: 199px;
+}
+
+.about-section .square {
+  position: absolute;
+  width: 380px;
+  height: 832px;
+  left: 0px;
+  top: 109px;
+  z-index: 1;
+  background: #00aaaa;
+}
+
+/* Mail Section */
+
+.mail-suscription {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 0;
+  gap: 45px;
+}
+
 .mail-suscription h2 {
   font-family: 'Space Grotesk';
   font-style: normal;
@@ -450,6 +513,169 @@ section {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+.mail-suscription a {
+  text-decoration: underline;
+}
+
+/* Mi Cuenta */
+
+.my-acc-section {
+  height: 600px;
+}
+
+.my-acc-section h2 {
+  position: absolute;
+  left: 103px;
+  top: 89px;
+  font-family: 'Space Grotesk';
+  font-size: 48px;
+  text-decoration: underline;
+}
+
+.my-acc-section p {
+  position: absolute;
+  width: 534px;
+  text-align: center;
+  left: 339px;
+  top: 211px;
+  font-weight: 300;
+  font-size: 36px;
+}
+
+.my-acc-section div {
+  position: absolute;
+  bottom: 176px;
+  left: 366px;
+  width: 480px;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.my-acc-section div a {
+  height: 70px;
+  width: 170px !important;
+}
+
+/* FAQ Section */
+
+.faq-section {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 144px;
+  gap: 70px;
+}
+
+.faq-section h2 {
+  font-size: 64px;
+  line-height: 75px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.faq-section .faq-accordion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 924px;
+  gap: 20px;
+  border-bottom: 1px solid var(--black);
+  cursor: pointer;
+}
+
+.faq-section .faq-accordion::after {
+  position: absolute;
+  content: '+';
+  font-size: 64px;
+  font-weight: 100;
+  right: 0;
+  top: -10px;
+}
+
+.faq-section .faq-accordion h3 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 51px;
+}
+
+.faq-section .faq-accordion p {
+  font-weight: 400;
+  font-size: 24px;
+  transition: all 0.2s;
+}
+
+.faq-section .faq-accordion p a {
+  display: inline-block;
+  padding: 0 10px;
+  background-color: var(--yellow);
+  border-radius: 10px;
+}
+
+/* ToS */
+
+.terms-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 75px;
+}
+
+.terms-section h2 {
+  font-size: 64px;
+  line-height: 75px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.terms-section p {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+/* Tracking */
+.tracking-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+}
+
+.tracking-section h2 {
+  font-size: 64px;
+  line-height: 75px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tracking-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tracking-section div label {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.tracking-section div p {
+  font-size: 20px;
+}
+
+.tracking-section button {
+  width: 170px;
+}
+
+/* Footer */
 
 footer {
   height: 342px;
@@ -526,6 +752,7 @@ footer p {
 
 .secondary-button {
   background-color: var(--black);
+  color: var(--white);
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
