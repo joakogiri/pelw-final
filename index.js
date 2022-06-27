@@ -11,6 +11,7 @@ if (document.URL.includes('index.html')) {
   );
 }
 
+// Password Check - 8 Caracteres
 if (
   document.URL.includes('login.html') ||
   document.URL.includes('sign-up.html')
@@ -136,6 +137,7 @@ function popList() {
   handleEmptyList();
 }
 
+// FAQ Accordion
 if (document.URL.includes('faq-tos.html')) {
   const accordion = document.querySelectorAll('.faq-accordion');
 
@@ -143,5 +145,29 @@ if (document.URL.includes('faq-tos.html')) {
     accordion[i].addEventListener('click', () =>
       accordion[i].lastElementChild.classList.toggle('hidden')
     );
+  }
+}
+
+// Fake Tracking
+if (document.URL.includes('my-purchases.html')) {
+  const trackingBtn = document.getElementById('tracking-btn');
+  const trackingError = document.getElementById('tracking-error');
+  const trackingInput = document.getElementById('tracking-input');
+
+  trackingBtn.addEventListener('click', () =>
+    handleTracking(trackingInput, trackingError)
+  );
+}
+
+function handleTracking(input, errorElement) {
+  errorElement.innerHTML = '';
+  if (!input.value) {
+    errorElement.innerHTML = 'Ingrese un código de operación.';
+  } else {
+    errorElement.classList.add('spinner');
+    setTimeout(() => {
+      errorElement.classList.remove('spinner');
+      errorElement.innerHTML = 'Lo sentimos. Esa operación no existe.';
+    }, 3000);
   }
 }

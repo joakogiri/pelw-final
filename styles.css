@@ -669,6 +669,7 @@ section {
 
 .tracking-section div p {
   font-size: 20px;
+  text-align: center;
 }
 
 .tracking-section button {
@@ -876,4 +877,36 @@ footer p {
 
 .hidden {
   display: none !important;
+}
+
+/* Spinner */
+.spinner {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner::after {
+  content: ' ';
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 3px solid var(--dark-blue);
+  border-color: var(--dark-blue) transparent var(--dark-blue) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+/* Sacado de página
+** https://loading.io/css/
+*/
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
