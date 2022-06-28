@@ -1,6 +1,7 @@
 'use strict';
 
-const baseUrl = window.location.origin + '/';
+// github ver
+const baseUrl = window.location.origin + '/pelw-final/';
 const indexUrl = 'index.html';
 const loginUrl = 'login.html';
 const signUpUrl = 'sign-up.html';
