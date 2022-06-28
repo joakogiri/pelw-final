@@ -2,7 +2,10 @@
 
 // Email Suscription - Custom Checkmark
 
-if (document.URL.includes('index.html')) {
+if (
+  window.location.pathname === '/index.html' ||
+  window.location.pathname === '/'
+) {
   const mailCheckmark = document.getElementById('mail-checkmark');
   const mailCheckbox = document.getElementById('mail-checkbox');
 
@@ -13,8 +16,8 @@ if (document.URL.includes('index.html')) {
 
 // Password Check - 8 Caracteres
 if (
-  document.URL.includes('login.html') ||
-  document.URL.includes('sign-up.html')
+  window.location.pathname === '/login.html' ||
+  window.location.pathname === '/sign-up.html'
 ) {
   const mailPass = document.getElementById('mail-password');
   const submitBtn = document.getElementById('submit-btn');
@@ -30,11 +33,15 @@ if (
 }
 
 // Homepage - Countdown 8 de Julio 6pm
-const dropCountdown = document.getElementById('drop-countdown');
-const fechaLimite = new Date('Jul 8, 2022 18:00:00').getTime();
 
-const countdown = setInterval(() => {
-  if (document.URL.includes('index.html')) {
+if (
+  window.location.pathname === '/index.html' ||
+  window.location.pathname === '/'
+) {
+  const dropCountdown = document.getElementById('drop-countdown');
+  const fechaLimite = new Date('Jul 8, 2022 18:00:00').getTime();
+
+  const countdown = setInterval(() => {
     const fechaHoy = new Date().getTime();
     const tiempoRestante = fechaLimite - fechaHoy;
 
@@ -55,10 +62,8 @@ const countdown = setInterval(() => {
         horas > 9 ? horas : '0' + horas
       }:${mins > 9 ? mins : '0' + mins}:${segs > 9 ? segs : '0' + segs} hs.`;
     }
-  } else {
-    clearInterval(countdown);
-  }
-}, 1000);
+  }, 1000);
+}
 
 // Cart
 const cartBtn = document.getElementById('cart-btn');
@@ -138,7 +143,7 @@ function popList() {
 }
 
 // FAQ Accordion
-if (document.URL.includes('faq-tos.html')) {
+if (window.location.pathname === '/faq-tos.html') {
   const accordion = document.querySelectorAll('.faq-accordion');
 
   for (let i = 0; i < accordion.length; i++) {
@@ -149,7 +154,7 @@ if (document.URL.includes('faq-tos.html')) {
 }
 
 // Fake Tracking
-if (document.URL.includes('my-purchases.html')) {
+if (window.location.pathname === '/my-purchases.html') {
   const trackingBtn = document.getElementById('tracking-btn');
   const trackingError = document.getElementById('tracking-error');
   const trackingInput = document.getElementById('tracking-input');
