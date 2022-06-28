@@ -1,10 +1,21 @@
 'use strict';
 
+const baseUrl = window.location.origin + '/';
+const indexUrl = 'index.html';
+const loginUrl = 'login.html';
+const signUpUrl = 'sign-up.html';
+const myAccUrl = 'my-account.html';
+const shopUrl = 'shop.html';
+const aboutUrl = 'about.html';
+const myPurchUrl = 'my-purchases.html';
+const faqUrl = 'faq-tos.html';
+
 // Email Suscription - Custom Checkmark
 
 if (
-  window.location.pathname === '/index.html' ||
-  window.location.pathname === '/'
+  window.location.href === baseUrl + indexUrl ||
+  window.location.href === baseUrl ||
+  window.location.href === baseUrl + shopUrl
 ) {
   const mailCheckmark = document.getElementById('mail-checkmark');
   const mailCheckbox = document.getElementById('mail-checkbox');
@@ -16,8 +27,8 @@ if (
 
 // Password Check - 8 Caracteres
 if (
-  window.location.pathname === '/login.html' ||
-  window.location.pathname === '/sign-up.html'
+  window.location.href === baseUrl + loginUrl ||
+  window.location.href === baseUrl + signUpUrl
 ) {
   const mailPass = document.getElementById('mail-password');
   const submitBtn = document.getElementById('submit-btn');
@@ -35,8 +46,8 @@ if (
 // Homepage - Countdown 8 de Julio 6pm
 
 if (
-  window.location.pathname === '/index.html' ||
-  window.location.pathname === '/'
+  window.location.href === baseUrl + indexUrl ||
+  window.location.href === baseUrl
 ) {
   const dropCountdown = document.getElementById('drop-countdown');
   const fechaLimite = new Date('Jul 8, 2022 18:00:00').getTime();
@@ -143,7 +154,7 @@ function popList() {
 }
 
 // FAQ Accordion
-if (window.location.pathname === '/faq-tos.html') {
+if (window.location.href === baseUrl + faqUrl) {
   const accordion = document.querySelectorAll('.faq-accordion');
 
   for (let i = 0; i < accordion.length; i++) {
@@ -154,7 +165,7 @@ if (window.location.pathname === '/faq-tos.html') {
 }
 
 // Fake Tracking
-if (window.location.pathname === '/my-purchases.html') {
+if (window.location.href === baseUrl + myPurchUrl) {
   const trackingBtn = document.getElementById('tracking-btn');
   const trackingError = document.getElementById('tracking-error');
   const trackingInput = document.getElementById('tracking-input');
