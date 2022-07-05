@@ -646,6 +646,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 75px;
+  height: 700px;
 }
 
 .tracking-section h2 {
@@ -879,10 +880,14 @@ footer p {
   display: none !important;
 }
 
+.pass-err {
+  margin-bottom: 30px;
+}
+
 /* Spinner */
 .spinner {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

@@ -91,7 +91,6 @@
 
           <fieldset>
             <label for="mail-password">Crea tu contraseña</label>
-            <p id="password-error" class="c-red"></p>
             <input
               type="password"
               id="mail-password"
@@ -100,6 +99,7 @@
               placeholder="Tu c0ntRas3ña"
               required
             />
+            <p id="password-error" class="c-red pass-err"></p>
             <label for="re-password">Confirma tu contraseña</label>
             <input
               type="password"
@@ -109,6 +109,7 @@
               placeholder="Confirmar c0ntRas3ña"
               required
             />
+            <p id="confirm-error" class="c-red pass-err"></p>
           </fieldset>
 
           <button
@@ -150,5 +151,6 @@
 
     <!-- Archivo JavaScript -->
     <script src="index.js"></script>
+    <script src="js/password.js"></script>
   </body>
 </html>
